@@ -32,7 +32,7 @@ grails> compile
 grails> run-app
 ```
 
-Grails application running at http://localhost:8080
-Do CRUD operation on AuditedDomain and NonAuditedDomain with Grails default interface.
-Check out the Database Console in browser at: http://localhost:8080/dbconsole
-Notice the audit table for AuditedDomain had been created: AUDITED_DOMAIN_AUD.
+* Grails application running at http://localhost:8080
+* Do CRUD operation on AuditedDomain and NonAuditedDomain with Grails default interface
+* Check out the Database Console in browser at: http://localhost:8080/dbconsole
+* Notice the audit table for AuditedDomain had been created: AUDITED_DOMAIN_AUD
