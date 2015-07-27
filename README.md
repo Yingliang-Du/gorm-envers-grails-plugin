@@ -22,3 +22,17 @@ compile ("org.grails.plugins:gorm-envers:0.1") {
 Add @Audited annotation to the domain class you want to audit
 
 That is it!
+
+## Demo after install gorm-envers plugin
+```
+cd pathto/gorm-envers-grails-plugin/demo
+grails 
+grails> clean
+grails> compile
+grails> run-app
+```
+
+Grails application running at http://localhost:8080
+Do CRUD operation on AuditedDomain and NonAuditedDomain with Grails default interface.
+Check out the Database Console in browser at: http://localhost:8080/dbconsole
+Notice the audit table for AuditedDomain had been created: AUDITED_DOMAIN_AUD.
