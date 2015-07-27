@@ -1,5 +1,5 @@
 # gorm-envers-grails-plugin
-A Grails Plugin for Auditing GORM Domain class using Hibernate Envers
+A Grails Plugin for Auditing GORM Domain class using Hibernate Envers. This plugin only work with Grails 3 or later.
 
 ## Install gorm-envers plugin on your machine
 ```
