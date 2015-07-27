@@ -9,7 +9,7 @@ grails clean
 grails compile
 grails install
 ```
-## Start auditing domain classes in your Grails application:
+## Audit domain classes in your Grails application
 
 Add plugin dependency in build.gradle
 ```
