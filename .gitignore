@@ -4,3 +4,6 @@
 # build ignore
 **/build/
 
+# IDE ignore
+**/.idea/
+**/*.iml
