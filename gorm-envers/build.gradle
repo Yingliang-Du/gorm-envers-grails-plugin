@@ -33,7 +33,7 @@ plugins {
     id "com.jfrog.bintray" version "1.2"
 }
 
-version "0.1"
+version "0.2"
 group "org.grails.plugins"
 
 apply plugin: 'maven-publish'
@@ -42,6 +42,18 @@ apply plugin: 'idea'
 apply plugin: "org.grails.grails-plugin"
 apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/grailsCentralPublishing.gradle'
 apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/master/profiles/plugin/templates/bintrayPublishing.gradle'
+bintray {
+    pkg {
+        userOrg = '' // If you want to publish to an organization
+        name = "org.grails.plugins:$project.name"
+        issueTrackerUrl = "https://github.com/Yingliang-Du/$project.name-grails-plugin/issues"
+        vcsUrl = "https://github.com/Yingliang-Du/$project.name-grails-plugin"
+        version {
+            attributes = ['grails-plugin': "org.grails.plugins:$project.name"]
+            name = project.version
+        }
+    }
+}
 
 ext {
     grailsVersion = project.grailsVersion

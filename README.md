@@ -13,7 +13,7 @@ grails install
 
 Add plugin dependency in build.gradle
 ```
-compile ("org.grails.plugins:gorm-envers:0.1") {
+compile ("org.grails.plugins:gorm-envers:0.2") {
 	exclude module: 'hibernate-core'
 	exclude module: 'hibernate-entitymanager'
 }
