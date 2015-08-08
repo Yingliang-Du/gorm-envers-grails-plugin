@@ -77,7 +77,7 @@ dependencies {
     compile "org.grails.plugins:hibernate"
     compile "org.grails.plugins:cache"
     compile "org.hibernate:hibernate-ehcache"
-	compile ("org.grails.plugins:gorm-envers:0.2") {
+	compile ("org.grails.plugins:gorm-envers:0.3-SNAPSHOT") {
 		exclude module: 'hibernate-core'
 		exclude module: 'hibernate-entitymanager'
 	}

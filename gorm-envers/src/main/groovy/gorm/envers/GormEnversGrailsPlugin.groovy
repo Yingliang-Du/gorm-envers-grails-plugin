@@ -53,7 +53,7 @@ Hibernate Envers will create audit table in the Database for the annotated domai
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
 
     // Location of the plugin's issue tracker.
-    def issueManagement = [ system: "JIRA", url: "https://github.com/Yingliang-Du/$project.name-grails-plugin/issues" ]
+    def issueManagement = [ system: "JIRA", url: "https://github.com/Yingliang-Du/gorm-envers-grails-plugin/issues" ]
 
     // Online location of the plugin's browseable source code.
     def scm = [ url: "https://github.com/Yingliang-Du/gorm-envers-grails-plugin" ]
