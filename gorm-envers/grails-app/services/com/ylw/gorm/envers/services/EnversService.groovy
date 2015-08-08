@@ -31,6 +31,8 @@ class EnversService {
     // Inject session factory
     def sessionFactory
 
+
+
     def serviceMethod() {
         "Hello World new Date -> " + new Date()
     }
@@ -39,5 +41,25 @@ class EnversService {
         AuditReader reader = AuditReaderFactory.get(sessionFactory.currentSession)
         AuditQueryCreator queryCreator = reader.createQuery()
         queryCreator.forRevisionsOfEntity(gdc, false, true).resultList
+    }
+
+    def findRevisions(def gdc, def id) {
+        AuditReader reader = AuditReaderFactory.get(sessionFactory.currentSession)
+        reader.getRevisions(gdc, id);
+    }
+
+    def isAudited(def gdc) {
+        AuditReader reader = AuditReaderFactory.get(sessionFactory.currentSession)
+        reader.isEntityClassAudited(gdc)
+    }
+
+    def findCurrentRevision(def gdc) {
+        AuditReader reader = AuditReaderFactory.get(sessionFactory.currentSession)
+        reader.getCurrentRevision(gdc, false)
+    }
+
+    def findRevisionNumberForDate(Date date) {
+        AuditReader reader = AuditReaderFactory.get(sessionFactory.currentSession)
+        reader.getRevisionNumberForDate(date)
     }
 }

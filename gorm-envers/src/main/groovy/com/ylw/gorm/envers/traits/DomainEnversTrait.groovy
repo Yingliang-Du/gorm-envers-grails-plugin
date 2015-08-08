@@ -35,11 +35,23 @@ trait DomainEnversTrait {
         return enversService.serviceMethod()
     }
 
-    def audited() {
-        AnnotationUtils.getAnnotation(this.class, Audited) != null
-    }
+//    def audited() {
+//        AnnotationUtils.getAnnotation(this.class, Audited) != null
+//    }
 
     def findAllRevisions() {
         enversService.findAllRevisions(this.class)
+    }
+
+    def isAudited() {
+        enversService.isAudited(this.class)
+    }
+
+    def findCurrentRevision() {
+        enversService.findCurrentRevision(this.class)
+    }
+
+    def findRevisionNumberForDate() {
+        enversService.findRevisionNumberForDate(new Date())
     }
 }

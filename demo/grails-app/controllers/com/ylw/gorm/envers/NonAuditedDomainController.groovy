@@ -16,7 +16,7 @@ class NonAuditedDomainController {
 	
 	def isAudited() {
 		def domain = new NonAuditedDomain()
-	    render "Is the domain audited -> " + domain.audited()
+	    render "Is the domain audited -> " + domain.isAudited()
 	}
 	
 	def findAllRevisions() {

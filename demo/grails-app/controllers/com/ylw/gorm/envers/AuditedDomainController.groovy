@@ -16,7 +16,7 @@ class AuditedDomainController {
 	
 	def isAudited() {
 		def domain = new AuditedDomain()
-	    render "Is the domain audited -> " + domain.audited()
+	    render "Is the domain audited -> " + domain.isAudited()
 	}
 	
 	def findAllRevisions() {
@@ -28,6 +28,17 @@ class AuditedDomainController {
 			render "The domain is not audited!"
 		}
 	}
+
+    def findCurrentRevision() {
+        def domain = new AuditedDomain()
+        render "The current revision of this domain -> " + domain.findCurrentRevision()
+    }
+
+    def findRevisionNumberForDate() {
+        def domain = new AuditedDomain()
+        render "The revision number for today -> " + domain.findRevisionNumberForDate()
+    }
+
 	//---------end of gorm-envers----------
 
     def index(Integer max) {
