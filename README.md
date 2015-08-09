@@ -5,7 +5,7 @@ A Grails Plugin for Auditing GORM Domain class using Hibernate Envers. This plug
 
 Add the release version of the plugin dependency in build.gradle
 ```
-compile ("org.grails.plugins:gorm-envers:0.2") {
+compile ("org.grails.plugins:gorm-envers:0.3") {
 	exclude module: 'hibernate-core'
 	exclude module: 'hibernate-entitymanager'
 }
@@ -23,7 +23,7 @@ grails install
 ```
 ### Add the installed plugin dependency in build.gradle
 ```
-compile ("org.grails.plugins:gorm-envers:0.3-SNAPSHOT") {
+compile ("org.grails.plugins:gorm-envers:0.4-SNAPSHOT") {
 	exclude module: 'hibernate-core'
 	exclude module: 'hibernate-entitymanager'
 }
